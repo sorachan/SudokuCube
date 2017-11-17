@@ -1,0 +1,7 @@
+%%BeginPageSetup
+% << /PageSize [pw ph] >> setpagedevice
+%%EndPageSetup
+save
+pw 2 div ph 20 mm sub translate
+/showpage {} bind def
+

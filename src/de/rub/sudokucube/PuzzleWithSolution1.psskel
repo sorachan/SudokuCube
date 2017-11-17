@@ -1,0 +1,30 @@
+/mm {360 mul 127 div} def
+/hcenter {dup stringwidth pop 2 div neg 0 rmoveto} def
+/polarx {cos mul} def
+/polary {sin mul} def
+/polar {2 copy polarx 3 1 roll polary} def
+/textheight {
+    gsave
+    {
+        100 100 moveto
+        (HIpg) true charpath pathbbox
+        exch pop 3 -1 roll pop
+        exch sub
+    }
+    stopped
+    {
+        pop pop
+        currentfont /FontMatrix get 3 get
+    }
+    if
+    grestore
+} bind def
+/vcenter {
+    textheight 0.75 mul 2 div
+    0 exch neg rmoveto
+} bind def
+/center {hcenter vcenter} def
+%%EndProlog
+%%BeginSetup
+%%EndSetup
+%%Page: 1 1

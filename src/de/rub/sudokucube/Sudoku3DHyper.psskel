@@ -1,0 +1,63 @@
+-40 mm 30 cos mul -45 mm translate
+
+% basic subdivisions
+
+1 setlinewidth
+-10 mm -10 mm -30 mm {0 exch moveto 40 mm 150 polar rmoveto 40 mm -30 polar rlineto 40 mm 30 polar rlineto 40 mm -30 polar rlineto 40 mm 30 polar rlineto stroke} for
+-10 mm -10 mm -30 mm {-30 polar moveto 0 -40 mm rmoveto 0 40 mm rlineto 40 mm 30 polar rlineto stroke} for
+-10 mm -10 mm -30 mm {-30 polar moveto 0 -40 mm rmoveto 40 mm -30 polar rmoveto 40 mm 30 polar rmoveto 0 40 mm rlineto 40 mm 30 polar rlineto stroke} for
+10 mm 10 mm 30 mm {30 polar moveto 0 -40 mm rmoveto 0 40 mm rlineto -40 mm -30 polar rlineto stroke} for
+10 mm 10 mm 30 mm {30 polar moveto 0 -40 mm rmoveto 40 mm -30 polar rmoveto 40 mm 30 polar rmoveto 0 40 mm rlineto -40 mm -30 polar rlineto stroke} for
+
+% outline
+
+4 setlinewidth
+0 1 1 {
+/ctr exch def
+ctr 80 mm mul 30 polarx 0 moveto
+40 mm 30 polar rmoveto
+40 mm 150 polar rlineto
+40 mm -150 polar rlineto
+40 mm -90 polar rlineto
+40 mm -30 polar rlineto
+40 mm 30 polar rlineto
+closepath
+stroke
+ctr 80 mm mul 30 polarx 0 moveto
+40 mm 150 polar rmoveto
+ctr 80 mm mul 30 polarx 0 lineto
+40 mm 30 polar rlineto
+stroke
+ctr 80 mm mul 30 polarx 0 moveto
+0 -40 mm rlineto
+stroke
+ctr 80 mm mul 30 polarx 0 moveto
+0 -20 mm rmoveto
+40 mm 150 polar rlineto
+stroke
+ctr 80 mm mul 30 polarx 0 moveto
+20 mm 150 polar rmoveto
+40 mm 30 polar rlineto
+stroke
+ctr 80 mm mul 30 polarx 0 moveto
+20 mm 30 polar rmoveto
+0 -40 mm rlineto
+stroke
+} for
+
+% insert given numbers in this format
+
+%/Helvetica-Bold
+%20 selectfont
+%5 mm 30 polar moveto
+%0 -5 mm rmoveto
+%(8) center show
+
+% insert numbers set by user in this format
+
+%/Courier
+%20 selectfont
+%15 mm 30 polar moveto
+%0 -5 mm rmoveto
+%(8) center show
+
