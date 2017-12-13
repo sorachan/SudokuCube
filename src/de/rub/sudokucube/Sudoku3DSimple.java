@@ -226,15 +226,10 @@ public class Sudoku3DSimple extends Sudoku {
                     path.closePath();
                     nodeMap.put(vert[i][j], path);
                 } else if (i > 3 && j < 4) {
-//                        System.err.println("path for ("+i+","+j+")");
                     path.moveTo(Sudoku.polx(4 - j, 150) + Sudoku.polx(i - 4, 30), Sudoku.poly(4 - j, 150) + Sudoku.poly(i - 4, 30));
-//                        System.err.println(path.getCurrentPoint());
                     path.lineTo(Sudoku.polx(3 - j, 150) + Sudoku.polx(i - 4, 30), Sudoku.poly(3 - j, 150) + Sudoku.poly(i - 4, 30));
-//                        System.err.println(path.getCurrentPoint());
                     path.lineTo(Sudoku.polx(3 - j, 150) + Sudoku.polx(i - 3, 30), Sudoku.poly(3 - j, 150) + Sudoku.poly(i - 3, 30));
-//                        System.err.println(path.getCurrentPoint());
                     path.lineTo(Sudoku.polx(4 - j, 150) + Sudoku.polx(i - 3, 30), Sudoku.poly(4 - j, 150) + Sudoku.poly(i - 3, 30));
-//                        System.err.println(path.getCurrentPoint());
                     path.closePath();
                     nodeMap.put(vert[i][j], path);
                 }

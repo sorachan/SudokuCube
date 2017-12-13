@@ -53,10 +53,11 @@ public class SudokuMainWindow extends javax.swing.JFrame implements PropertyChan
     private Class puzCls;
     final String[] sudCls = new String[]{
         "de.rub.sudokucube.Sudoku3DSimple",
-        "de.rub.sudokucube.Sudoku3DHyper"
+        "de.rub.sudokucube.Sudoku3DHyper",
+        "de.rub.sudokucube.StandardSudoku"
     };
     int[] aset = new int[]{0, 0};
-    static final String VERSION = "v1.0";
+    static final String VERSION = "v1.1";
     static final String PROGRAM_NAME = "SudokuCube " + VERSION;
 
     static final boolean DEBUG = false;

@@ -103,7 +103,7 @@
     <Component class="javax.swing.JComboBox" name="classBox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { bundle.getString(&quot;Simple3D&quot;), bundle.getString(&quot;Hyper3D&quot;) })" type="code"/>
+          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { bundle.getString(&quot;Simple3D&quot;), bundle.getString(&quot;Hyper3D&quot;), bundle.getString(&quot;Standard3D&quot;) })" type="code"/>
         </Property>
       </Properties>
       <AuxValues>

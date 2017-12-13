@@ -36,6 +36,7 @@ import java.util.Set;
 import javax.swing.AbstractAction;
 import javax.swing.ActionMap;
 import javax.swing.InputMap;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.KeyStroke;
 import javax.swing.Timer;
@@ -258,7 +259,20 @@ public class DrawPanel extends JPanel implements MouseListener {
                 }
             }
         }
-        wrongAlert = true;
-        timer.start();
+        if(!wrong.isEmpty()){
+            wrongAlert = true;
+            timer.start();
+        }else{
+            boolean solved = true;
+            for (Node n : sud.getGiven().keySet()) {        
+                if (sud.getValue(n).compareTo(sln.getValue(n)) != 0) {
+                    solved = false;
+                }
+            }
+            if(solved){
+                java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("de/rub/sudokucube/Bundle"); // NOI18N
+                JOptionPane.showMessageDialog(this, bundle.getString("SOLVED"));
+            }
+        }
     }
 }

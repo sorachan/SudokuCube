@@ -55,8 +55,8 @@ public class OptionsDialog extends javax.swing.JDialog {
 
         classSel = new javax.swing.JLabel();
         levelSel = new javax.swing.JLabel();
-        classBox = new javax.swing.JComboBox<>();
-        levelBox = new javax.swing.JComboBox<>();
+        classBox = new javax.swing.JComboBox<String>();
+        levelBox = new javax.swing.JComboBox<String>();
         cancelBtn = new javax.swing.JButton();
         confirmBtn = new javax.swing.JButton();
         langSel = new javax.swing.JLabel();
@@ -85,9 +85,9 @@ public class OptionsDialog extends javax.swing.JDialog {
 
         levelSel.setText(bundle.getString("DIFFICULTY:")); // NOI18N
 
-        classBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { bundle.getString("Simple3D"), bundle.getString("Hyper3D") }));
+        classBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { bundle.getString("Simple3D"), bundle.getString("Hyper3D"), bundle.getString("Standard3D") }));
 
-        levelBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "- TO DO! -" }));
+        levelBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "- TO DO! -" }));
 
         cancelBtn.setText(bundle.getString("CANCEL")); // NOI18N
         cancelBtn.addActionListener(new java.awt.event.ActionListener() {
